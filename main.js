@@ -9,10 +9,48 @@ const jobTypes = {
   programmer: 'Any Ship!'
 };
 
+//  CrewMember should have a name, a job, a specialSkill and ship upon instantiation
+// can enter a ship
 // Your code will go here
+class CrewMember {
+  constructor(name, job, specialSkill, ship) {
+    this.name = name
+    this.job =  job
+    this.specialKill = specialSkill
+    this.ship = ship
+  }
+  
+enterShip = (boat) => {
+this.ship = boat
+// take the incoming ship and push it into the ships crews Array for this CrewMember
+this.ship.crew.push(this)
 
 
+}
+}
+// should have a name, a type, an ability and an empty crew upon instantiation
+// can return a mission statement correctly
+class Ship {
+  constructor(name , type, ability){
+  this.name = name
+  this.type = type
+  this.ability = ability
+  this.crew = []
+  }
 
+  missionStatement = () => {
+   
+    // need at least 1 crew member to perform a mission, so the crew array length 1
+    if (this.crew.length ===0) {
+      
+    } else {
+
+    }
+    // if no crew return "Can't preform a mission yet."
+
+
+  }
+}
 
 
 
